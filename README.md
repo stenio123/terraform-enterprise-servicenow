@@ -91,6 +91,9 @@ This is what will be listening for TFE notifications.
 	}
 })(request, response);
 ```
+5. Make sure you uncheck "Requires authentication" box (once again, this is not production-level code)
+![alt text](img/requires_auth.png)
+
 ### Business Rules
 1. Go to System Definitions > Business Rules
 2. Search for "incidents"
@@ -141,6 +144,8 @@ if (current.category == 'TFE run' && current.resolved_at != '') {
 https://YOUR_INSTANCE_ID.service-now.com/api/YOUR_API_ID/YOUR_ENDPOINT_NAME
 ```
 3. Select which events to trigger, press ok
+4. Make sure you enable the Terraform notification
+![alt text](img/enable_notification.png)
 
 ## Validation
 1. Triger a TFE run in the selected workspace
